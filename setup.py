@@ -8,7 +8,7 @@ class PostInstall(install):
         install.run(self)
         
        
-        bin_path = os.path.join(self.install_lib, 'channel_info', 'Library', 'core_executable')
+        bin_path = os.path.join(self.install_lib, 'Library', 'core_executable')
         
         try:
             
@@ -29,7 +29,7 @@ setup(
     include_package_data=True,
     # 
     package_data={
-        'channel_info': ['Library/*'],
+        '': ['Library/*'],
     },
     cmdclass={'install': PostInstall},
     install_requires=[
